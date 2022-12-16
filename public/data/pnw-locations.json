@@ -1,0 +1,222 @@
+[
+    {
+        "name": "Mount Rainier",
+        "location": "Washington",
+        "img": "/img/mount-rainier.jpg",
+        "map": "https://goo.gl/maps/1Luwk7HgAW1trKvW8",
+        "category":["Nature"],
+        "medal": "Silver",
+        "adventureComplete": false,
+        "description": "At a height of 14,410 feet, Mount Rainier is the highest volcanic peak in the contiguous United States. It has the largest alpine glacial system outside of Alaska and the world's largest volcanic glacier cave system in the summit crater. Visible throughout the region, Mount Rainier shapes the physical environment, inspires the human experience, and defines the identity of the Pacific Northwest. If you are planning a summer trip to Mount Rainier, consider visiting mid-week, which is generally less crowded. Parking is limited in many areas of the park. Wait times at the Nisqually and White River Entrances can be over an hour on the very busiest summer weekends and holidays. Entering the park before 10:00 am or after 2:30 pm can help avoid delays when visitation is heavy."
+    },
+    {
+        "name": "Mailbox Peak Hiking Loop",
+        "location": "Washington",
+        "img": "/img/mailbox.jpeg",
+        "map": "https://goo.gl/maps/o6aDcBCKAVrj3GuE8",
+        "category":["Nature"],
+        "medal": "Silver",
+        "adventureComplete": false,
+        "description": "Try this 7.7-mile loop trail near North Bend, Washington. Generally considered a challenging route, it takes an average of 6 h 27 min to complete. This is a very popular area for hiking, so you'll likely encounter other people while exploring. The best times to visit this trail are May through October. Dogs are welcome and may be off-leash in some areas."
+    },
+    {
+        "name": "Crater Lake",
+        "location": "Oregon",
+        "img": "/img/crater-lake.jpg",
+        "map": "https://goo.gl/maps/PHBmUbDoBCzU6siz7",
+        "category":["Nature"],
+        "medal": "Gold",
+        "adventureComplete": false,
+        "description": "Crater Lake is a volcanic crater lake in south-central Oregon in the western United States. It is the main feature of Crater Lake National Park and is famous for its deep blue color and water clarity. The lake and surrounding park areas offer many recreational activities including hiking, biking, snowshoeing, fishing, and cross-country skiing are available, and during the summer, campgrounds and lodges at Crater Lake are open to visitors."
+    },
+    {
+        "name": "Space Needle",
+        "location": "Washington",
+        "img": "/img/space-needle.jpg",
+        "map": "https://goo.gl/maps/CbzM51QT7tarrLJH6",
+        "category": ["Landmark"],
+        "medal": "Bronze",
+        "adventureComplete": false,
+        "description": "The Space Needle is an observation tower in Seattle, Washington, United States. Considered to be an icon of the city, it has been designated a Seattle landmark. Located in the Lower Queen Anne neighborhood, it was built in the Seattle Center for the 1962 World's Fair, which drew over 2.3 million visitors."
+    },
+    {
+        "name": "Olympic National Park",
+        "location": "Washington",
+        "img": "/img/olympic.jpg",
+        "map": "https://goo.gl/maps/opLMFQjk7xhHsFGA6",
+        "category":["Nature"],
+        "medal": "Gold",
+        "adventureComplete": false,
+        "description": "With its incredible range of precipitation and elevation, diversity is the hallmark of Olympic National Park. Encompassing nearly a million acres, the park protects a vast wilderness, thousands of years of human history, and several distinctly different ecosystems, including glacier-capped mountains, old-growth temperate rain forests, and over 70 miles of wild coastline."
+    },
+    {
+        "name": "Leavenworth",
+        "location": "Washington",
+        "img": "/img/leavenworth.jpg",
+        "map": "https://goo.gl/maps/pBQmPmyrZWM2h8z67",
+        "category":["City"],
+        "medal": "Silver",
+        "adventureComplete": false,
+        "description": "Leavenworth is a Bavarian-styled village in the Cascade Mountains, in central Washington State. Alpine-style buildings with restaurants serving German beer and food line Front Street. The Nutcracker Museum displays thousands of nutcrackers, some dating back centuries. On the Wenatchee River, Waterfront Park is a habitat for ospreys and eagles. The village is a gateway to nearby ski areas and wineries."
+    },
+    {
+        "name": "Mount St. Helens",
+        "location": "Washington",
+        "img": "/img/saint-helens.jpg",
+        "map": "https://goo.gl/maps/5Grex45vL8FwYpf16",
+        "category":["Landmark", "Nature"],
+        "medal": "Bronze",
+        "adventureComplete": false,
+        "description": "Mount St. Helens National Volcanic Monument is a U.S. National Monument that includes the area around Mount St. Helens in Washington. It was established on August 27, 1982, by U.S. President Ronald Reagan, following the 1980 eruption."
+    },
+    {
+        "name": "Bainbridge Island",
+        "location": "Washington",
+        "img": "/img/bainbridge-island.jpg",
+        "map": "https://goo.gl/maps/dt6PQ3cLsFsMNHLB7",
+        "category":["City"],
+        "medal": "Bronze",
+        "adventureComplete": false,
+        "description": "Bainbridge Island is a small city in western Washington state. It is connected to Seattle by ferry. The forested Bloedel Reserve has landscaped gardens and trails. Nearby, coastal Fay Bainbridge Park and Campground features an east-facing beach with views of the Cascade Mountains and Puget Sound. Bainbridge Island Museum of Art, in an eco-friendly building, offers rotating exhibitions by contemporary local artists."
+    },
+    {
+        "name": "Orcas Island",
+        "location": "Washington",
+        "img": "/img/orcas-island.jpg",
+        "map": "https://goo.gl/maps/qBVtaSxADi2MPWhB9",
+        "category":["City"],
+        "medal": "Bronze",
+        "adventureComplete": false,
+        "description": "Orcas Island is the largest of the San Juan Islands of the Pacific Northwest, which are in the northwestern corner of San Juan County, Washington. Most of the 57 square miles are rural and hilly, a pleasure for drivers and a challenge for cyclists, with curving roads that wind through forests and past artist studios, fields with old apple barns, and the occasional turn-of-the-century prune drying barn. Take this driving tour around Orcas Island to experience all it's hidden gems and notable stops!"
+    },
+    {
+        "name": "Winthrop",
+        "location": "Washington",
+        "img": "/img/winthrop.jpg",
+        "map": "https://goo.gl/maps/6ni6LqiPtY2H4s2T7",
+        "category":["City"],
+        "medal": "Gold",
+        "adventureComplete": false,
+        "description": "Winthrop is known for the American Old West design of all the buildings in town, making it a tourist destination. The town theme idea was inspired by the example of Leavenworth, Washington, which in turn was heavily based on Solvang, California.[9] Winthrop is a popular cross-country skiing site, with over 120 miles (200K) of groomed trails. Events include the Winthrop Rhythm and Blues Festival, the Methow Valley Chamber Music Festival, live theatre and many art galleries."
+    },
+    {
+        "name": "Lake Chelan",
+        "location": "Washington",
+        "img": "/img/lake-chelan.jpg",
+        "map": "https://goo.gl/maps/6mzcVRwvr14BZvZ2A",
+        "category":["City", "Nature"],
+        "medal": "Silver",
+        "adventureComplete": false,
+        "description": "Lake Chelan is a narrow, 50.5-mile long lake in Chelan County, north-central Washington state, U.S. Before 1927, it was the largest natural lake in the state by any measure. The main attractions of Lake Chelan include beautiful vistas of the lake, surrounding mountains, fishing, vineyards and orchards, beautiful hikes, boating, paragliding and parasailing, water sports, wine tasting, music, and festivals."
+    },
+    {
+        "name": "Oregon Winterfest",
+        "location": "Oregon",
+        "img": "/img/winterfest.jpg",
+        "map": "https://goo.gl/maps/HqEUfDAE1R9puwvb9",
+        "category":["Event"],
+        "medal": "Gold",
+        "adventureComplete": false,
+        "description": "The Oregon WinterFest is a three-day festival that takes place every February on President's Day weekend at the Old Mill District in Bend, Oregon. Oregon WinterFest bills itself as Oregon's party of the winter, where a little snow isn't going to stop anyone from having a good time. It is a wild event that features ice carving, a fire pit competition, a rail jam for snowboarders and skiers, and a music festival."
+    },
+    {
+        "name": "Julyamsh Powwow",
+        "location": "Idaho",
+        "img": "/img/julyamsh.jpg",
+        "map": "https://goo.gl/maps/ZNW2cXcug2MPSXhb6",
+        "category":["Event"],
+        "medal": "Bronze",
+        "adventureComplete": false,
+        "description": "The largest outdoor powwow in the Pacific Northwest, Julyamsh is hosted by the Coeur D'Alene Tribe at the Kootenai County Fairgrounds in Coeur D'Alene, Idaho. The cultural celebration is open to all, but it's important to remember that it isn't organized like events aimed largely at tourists, the dancing will begin when the time is right, and the dancing will end when the time is right. Julyamsh has always been noted for horse parades, with riders in full regalia in recognition of the importance of horses to the tribe."
+    },
+    {
+        "name": "Pendleton Round-Up",
+        "location": "Oregon",
+        "img": "/img/pendleton.jpg",
+        "map": "https://goo.gl/maps/LfkDkfvpXnzyYvy49",
+        "category":["Event"],
+        "medal": "Silver",
+        "adventureComplete": false,
+        "description": "The Pendleton Round-Up is a major annual rodeo in the northwestern United States, at Pendleton in northeastern Oregon. Held at the Pendleton Round-Up Stadium during the second full week of September each year since 1910, the rodeo brings roughly 50,000 people every year to the city. It is one of Oregon's biggest annual events and is four days of rodeo action, offering all the bull riding, barrel racing, roping, relays and mutton busting you could ever hope to see. Bring your hat, boots, big belt buckle and strap yourself in for an immersive experience."
+    },
+    {
+        "name": "Multnomah Falls",
+        "location": "Oregon",
+        "img": "/img/multnomah.jpg",
+        "map": "https://goo.gl/maps/uepnTBbCdatRbLqT6",
+        "category":["Nature"],
+        "medal": "Gold",
+        "adventureComplete": false,
+        "description": "Multnomah Falls is one of the countless waterfalls found in the Columbia River Gorge, but it deserves a mention of its own as a must-see destination in the Pacific Northwest. Located just a 30-minute drive east of Portland, this magnificent waterfall plunges more than 600 feet as the “granddaddy” of the 77 waterfalls found on the Oregon side of the gorge and only three falls in the entire nation are higher. While a 5-minute walk from the parking area offers a great view, if you want to see the falls in all its glory, hike the 1.2-mile trail to the top."
+    },
+    {
+        "name": "Snoqualmie Falls",
+        "location": "Washington",
+        "img": "/img/snoqualmie.jpg",
+        "map": "https://goo.gl/maps/DT4PgEbEDp6Cfwcn7",
+        "category":["Nature"],
+        "medal": "Gold",
+        "adventureComplete": false,
+        "description": "The Pacific Northwest is home to some of Washington's most spectacular waterfalls, and Snoqualmie Falls is one of the best. Just a 40-minute drive east of Seattle, the fast-moving whitewater tumbles 286 feet from the Snoqualmie River into a 65-foot-deep pool below. The falls are surrounded by a picturesque park that includes a gift shop, small café and observation deck as well as a large grassy area, perfect for an afternoon picnic."
+    },
+    {
+        "name": "North Cascades",
+        "location": "Washington",
+        "img": "/img/north-cascades.jpg",
+        "map": "https://goo.gl/maps/nVVoqKKv492yyFHT6",
+        "category":["Nature"],
+        "medal": "Silver",
+        "adventureComplete": false,
+        "description": "North Cascades National Park is one of the least visited national parks in the country, typically receiving less than 27,000 visitors per year, which means you can enjoy this incredibly scenic, rugged wilderness area practically all to yourself. The park is not only home to the most glaciers outside of Alaska, with over 300, but you will also find one of the most diverse ecosystems on earth. Look for bald eagles and osprey perched among the lush forests and rocky slopes as well as elusive creatures like the fisher, wolverine, gray wolf, black and grizzly bears, moose and cougars. Just driving the North Cascades Highway from Sedro-Wooley to Winthrop, makes for an unforgettable journey."
+    },
+    {
+        "name": "Astoria",
+        "location": "Oregon",
+        "img": "/img/astoria.jpg",
+        "map": "https://goo.gl/maps/iRgXRVhm5nJWMwAYA",
+        "category":["Nature"],
+        "medal": "Bronze",
+        "adventureComplete": false,
+        "description": "Astoria is one of Oregon's most interesting cities, though it may be most famous among film buffs as the setting of the popular 1985 film, “The Goonies.” The residence used as Mikey's house in the movie is still standing and its current owners even have a sign directing visitors from the bottom of their drive. Astoria itself is rich in tradition and historical architecture, located on the Columbia River, providing the opportunity for all types of water activities. For one of the best views, visit the Astoria Column, where the Pacific Ocean, Columbia River and snow-covered volcanoes of the Cascade Mountain Range can all be seen."
+    },
+    {
+        "name": "Deception Pass State Park",
+        "location": "Washington",
+        "img": "/img/deception-pass.jpg",
+        "map": "https://goo.gl/maps/BLLk9wQe3dezZfSF7",
+        "category":["Nature"],
+        "medal": "Silver",
+        "adventureComplete": false,
+        "description": "If you visit the town of La Conner, or even if you don't, Deception Pass State Park is a must-see, located just 15 miles west along Rosario Strait. This is one of Washington State's most beautiful and most visited destinations, with awe-inspiring scenery that can rival the best on the planet. The park features a saltwater shoreline with rugged cliffs dropping down to meet emerald-green waters as well as a historic bridge that provides amazing views of the pass. At Rosario Beach, set within a small cove, you will find tide pools to explore and, just offshore, pods of orcas and porpoises as well as the occasional gray whale can be seen swimming through the strait."
+    },
+    {
+        "name": "Skagit Valley Tulip Festival",
+        "location": "Washington",
+        "img": "/img/tulip-festival.jpg",
+        "map": "https://goo.gl/maps/1v9fX2trhyJQWVF49",
+        "category":["Event"],
+        "medal": "Bronze",
+        "adventureComplete": false,
+        "description": "Thousands head to this slice of the Pacific Northwest every year during the month of April to see the rainbow of colors that blanket the other picturesque landscape during the Skagit Valley Tulip Festival. Something made even more stunning with a backdrop of the dramatic Cascade Mountains, including towering Mount Baker. It all begins with the daffodils popping up in the pretty riverfront town of La Conner, lined with historic buildings that have been converted into gift shops, top-notch eateries and art galleries. Before long, around nearly every corner you will see tulips bursting into bloom in just about every hue of the rainbow, including some varieties that boast petals in multiple colors in just one bloom."
+    },
+    {
+        "name": "Portland",
+        "location": "Oregon",
+        "img": "/img/portland.jpg",
+        "map": "https://goo.gl/maps/dVC2mB16KLM9iYCS9",
+        "category":["City"],
+        "medal": "Bronze",
+        "adventureComplete": false,
+        "description": "Portland is known as one of the world's quirkiest towns, with its practically endless micro-breweries, funky neighborhoods, art galleries, cheap but fantastic food and forest hikes. It's a haven for outdoor nuts, cyclists and vegetarians as well as activists and animal lovers, all supporting its independent shops, coffee houses and brewpubs. In addition to the must-see-to-believe annual naked bike race, you will find some of Portland's most creative chefs clustered in pods, preparing their meal magic in food trucks and carts that range from sheds where you'd store your lawnmower to old vacation trailers."
+    },
+    {
+        "name": "Port Townsend",
+        "location": "Washington",
+        "img": "/img/port-townsend-new.jpg",
+        "map": "https://goo.gl/maps/pVvgqGP6WtnJsa3R9",
+        "category":["City"],
+        "medal": "Silver",
+        "adventureComplete": false,
+        "description": "Port Townsend, a Victorian seaport town set on the northeastern tip of Washington's beautiful Olympic Peninsula, surrounded by water and towering mountains, was named one of America's Best Small Towns by Fodor's Travel Guides and even earned the distinction as the “City of Dreams” when it was officially settled by in 1851, with the hopes that it would become the largest harbor on the west coast. While that didn't happen, it is still considered a city of dreams today, with people of all types and backgrounds giving up more lucrative careers in larger cities for the chance to live in one of the most picturesque places on the planet. Here, you will find an eclectic mix of artists, writers, musicians, mariners, and outdoor adventurers as well as streets lined with magnificent, century-old buildings that house a variety of restaurants and cafes, galleries and boutiques."
+    }
+]

@@ -1,0 +1,627 @@
+:root {
+  /* Color Palette https://www.canva.com/colors/color-palettes/green-blaze/ */
+  --primary-color: #94C973;
+  --secondary-color: #2F5233;
+  --third-color: #76B947;
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+main {
+  min-height: 85vh;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto Slab', serif;
+}
+
+label {
+  margin-bottom: 0.25rem;
+}
+
+section {
+  padding: 1rem;
+}
+
+/* Profile page */
+.profile-picture {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-name {
+  margin: 0;
+}
+
+.edit-profile-button {
+  margin: 0 1rem;
+  padding: 2px;
+  border: none;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  transition-duration: 0.25s;
+}
+
+.edit-profile-button:hover {
+  background-color: #EDB552;
+}
+
+.edit-profile-button:active {
+  background-color: #f8f549;
+}
+
+.sign-out-button {
+  border: none;
+  border-radius: 0.5rem;
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 10px 0px;
+  transition-duration: 0.25s;
+}
+
+.sign-out-button:hover {
+  background-color: #EDB552;
+}
+
+.sign-out-button:active {
+  background-color: #f8f549;
+}
+
+.progress {
+  height: 1.5rem;
+}
+
+.level-circle {
+  width: 40px;
+  height: 40px;
+}
+
+.center-text {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.award-medal {
+  width: 75px;
+}
+
+.medals-count {
+  font-size: 1.25rem;
+  margin: 0.75rem 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.gold-medal {
+  color: #EDB552;
+}
+
+.silver-medal {
+  color: #717484;
+}
+
+.bronze-medal {
+  color: #AA9083;
+}
+
+.location-card img {
+  object-fit: cover;
+  height: 10rem;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+.card {
+  width: 20rem;
+  height: 13.5rem;
+  margin-top: 2rem;
+  border: 0px solid #f3f3f3;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 10px 0px;
+}
+
+.card-title {
+  margin-bottom: 0;
+}
+
+.favorite-heart-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  z-index: 2;
+}
+
+.heart:hover {
+  transition: 0.15s;
+  fill: red;
+}
+
+
+.heart:active{
+  animation:scale-up-heart 1s; 
+} 
+
+@keyframes scale-up-heart{
+  0%    {transform:scale(.5)} 
+  100%  {transform:scale(1)}
+}
+
+.award-card {
+  width: 140px;
+}
+
+.cards-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-card-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.activity-card {
+  width: 350px;
+  margin: 0.5rem;
+  display: flex;
+  align-items: center;
+  /* justify-content: start; */
+}
+
+.activity-description {
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-title, .activity-date {
+  margin: 0;
+}
+
+/* Edit Profile Page */
+.back-arrow {
+  width: 24px;
+  margin-left: 2rem;
+  margin-right: 0.5rem;
+}
+
+.back-text {
+  margin: 0;
+}
+
+.edit-profile-header {
+  margin-top: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.upload-label:hover {
+  cursor: pointer;
+}
+
+.change-camera-edit {
+  width: 2rem;
+}
+
+.change-text-edit {
+  display: none;
+  color: #717484;
+  transition-duration: 0.25s;
+}
+
+.change-text-edit:hover {
+  color: black;
+}
+
+.form-group {
+  margin: 1rem 0;
+}
+
+.profile-text-input {
+  border-radius: 10px;
+  border: 1px solid #f3f3f3;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  resize: none;
+}
+
+.bio-label {
+  display: block;
+}
+
+.bio-text-area {
+  border-radius: 15px;
+  border: 1px solid #f3f3f3;
+  padding: 0.6rem 1rem;
+  max-height: 10rem;
+  width: 100%;
+  resize: none;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.edit-profile-submit{
+  background-color: var(--primary-color);
+}
+
+.edit-profile-submit:hover {
+  background-color: var(--third-color);
+}
+
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.search-filter {
+  display: flex;
+  justify-content: center;
+}
+
+.quick-filters {
+  display: flex;
+  justify-content: center;
+}
+
+.quick-filters-btn {
+  font-size: 0.75rem;
+  margin: 0 0.25rem;
+  background-color: var(--primary-color);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 10px 0px;
+}
+
+.quick-filters-btn:hover {
+  background-color: var(--third-color);
+}
+
+.quick-filters .active  {
+  color: var(--secondary-color);
+  border: solid 1px #e3ecdd;
+  background-color: white;
+}
+
+.quick-filters .active:hover  {
+  color: var(--secondary-color);
+  background-color: var(--third-color);
+}
+
+h2.secondary-text {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+h1.primary-text {
+  font-size: 50px;
+  font-weight: 800;
+}
+
+div.cards {
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+.app-footer {
+  margin-top: 3rem;
+  background-color: var(--primary-color);
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.about-wrapper {
+  flex-basis: 50%;
+}
+
+.links-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-basis: 50%;
+}
+
+.footer-links-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.footer-links-header {
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+
+.footer-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: black;
+}
+
+.footer-link:hover {
+  color: gray;
+}
+
+.back-to-top {
+  text-align: center;
+}
+
+.copyright-info {
+  text-align: center;
+  margin: 0;
+}
+
+/* My Activites and Discover Page */
+.activities-body {
+  padding: 1rem;
+}
+
+.discover-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.title-text {
+  color: black;
+}
+
+.image-container {
+  display: block;
+  height: 50%;
+  width: auto;
+  overflow: clip;
+  text-align: center;
+  color: black;
+}
+
+.image-container img {
+  width: 100%;
+  height: 70%;
+}
+
+.discover-text-container {
+  margin-right: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.discover-text-container img {
+  display: block;
+  width: 5rem;
+  height: auto;
+  max-height: 3rem;
+  max-width: 3rem;
+}
+
+.discover-text-container .gold-medal {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.image-container .activity-card {
+  color: grey;
+  margin-top: 0;
+}
+
+.discover-text-container h2 {
+  color: black;
+}
+
+.image-container .activity-card {
+  width: 230px;
+}
+
+.location-text .location-subtext {
+  font-size: 1.2rem;
+}
+
+body .discover-detail-text {
+  font-size: 1rem;
+  margin-right: 2rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.button-container {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+}
+
+.divider{
+  width: 5px;
+  height: auto;
+  display: inline-block;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards-header {
+  margin: 0;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.cards-favorites-detail {
+  margin: 0;
+  text-align: center;
+  color: black;
+}
+
+.go-favorite-button {
+  background-color: white;
+  padding: 0.5rem;
+  margin: 2rem 0 0.5rem 0;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(100, 100, 111, 0.2);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 10px 0px;
+}
+
+.go-favorite-button:hover {
+  transition: 0.2s;
+  background-color: var(--primary-color);
+}
+
+.go-favorite-heart-button {
+  border-radius: 0.5rem;
+  background-color: transparent;
+  border: none;
+}
+
+.cards a:link {
+  color: black;
+  text-decoration: none;
+}
+
+.cards a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.cards a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.cards a:active {
+  color: black;
+  text-decoration: none;
+}
+
+.loading-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Navbar */
+.app-logo {
+  height:5rem;
+}
+
+.nav-link {
+  margin: 0 1.5rem;
+  text-align: right;
+}
+
+.image-container h1, .image-container h2{
+  font-size: 1.5rem;
+}
+
+/* Error Page */
+.error-page {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  height: 100%;
+}
+
+.sad-face {
+  margin: 3rem;
+  width: 5rem;
+}
+
+/* On 600px or larger displays */
+@media(min-width: 600px){
+  body {
+    background-color: #e8f3e1;
+  }
+
+  body .discover-detail-text {
+      font-size: 1.1rem;
+  }
+
+  .quick-filters-btn {
+    font-size: 1rem;
+    margin: 0 0.5rem;
+  }
+}
+
+/* On 768px or larger displays */
+@media(min-width: 768px) {
+  body .discover-detail-text {
+      font-size: 1.15rem;
+  }
+
+  .location-text .location-subtext {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+
+  .search-filter {
+      max-width: 75%;
+  }
+
+  .quick-filters {
+      justify-content: start;
+  }
+
+  .cards-wrapper {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  .image-container h1, .image-container h2{
+      font-size: 2rem;
+  }
+
+  .image-container img {
+    width: 85%;
+    transition: .25s ease-out;
+  }
+
+  .card {
+      margin-right: 2rem;
+  }
+
+  .footer-wrapper{
+    flex-direction: row;
+  }
+}
+
+/* On 992px or larger displays */
+@media(min-width: 992px) {
+  body .discover-detail-text {
+      font-size: 1.2rem;
+      transition: .25s ease-out;
+  }
+
+  .change-camera-edit {
+      display: none;
+  }
+  
+  .change-text-edit {
+      display:inline;
+  }
+
+  .navbar-page {
+    border-bottom: solid white 1px;
+  }
+  
+  .image-container img {
+    width: 80%;
+    transition: .25s ease-out;
+  }
+}
+
+/* On 1312px or larger displays */
+@media(min-width: 1312px){
+  body .discover-detail-text {
+      font-size: 1.3rem;
+  }
+}
