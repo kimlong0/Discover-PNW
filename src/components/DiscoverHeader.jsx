@@ -15,7 +15,6 @@ export default function DiscoverHeader(props) {
         adjustFilters(event, setFilter, currentFilters);
     }
 
-
     return (
         <header>
             <section>

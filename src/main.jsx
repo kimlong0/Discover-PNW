@@ -2,8 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './components/App'
 import { BrowserRouter } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.css'
 import './index.css'
-import 'bootstrap/dist/css/bootstrap.css';
 
 import { initializeApp } from "firebase/app";
 
@@ -17,7 +17,6 @@ const firebaseConfig = {
   measurementId: "G-02VVYJ20EW"
 };
 
-// Initialize Firebase
 initializeApp(firebaseConfig);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

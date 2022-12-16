@@ -99,18 +99,21 @@ function App() {
       }
     })
 
-    //register a listener for changes to that value location
     onValue(userCompletedRef, (snapshot) => {
       const CompletedDataObj = snapshot.val();
-      const objKeys = Object.keys(CompletedDataObj);
-      const myActivitesArray = objKeys.map((keyString) => {
-        const activityObj = {};
-        const savedActivity = CompletedDataObj[keyString];
-        activityObj.id = keyString;
-        activityObj.name = savedActivity;
-        return activityObj;
-      })
-      setMyActivities(myActivitesArray); 
+      if (CompletedDataObj !== null) {
+        const objKeys = Object.keys(CompletedDataObj);
+        const myActivitesArray = objKeys.map((keyString) => {
+          const activityObj = {};
+          const savedActivity = CompletedDataObj[keyString];
+          activityObj.id = keyString;
+          activityObj.name = savedActivity;
+          return activityObj;
+        })
+        setMyActivities(myActivitesArray); 
+      } else {
+        setMyActivities([])
+      }
     });
   }
 
