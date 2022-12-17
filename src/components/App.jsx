@@ -18,12 +18,10 @@ import MyActivitiesPage from './pages/MyActivitiesPage';
 import LogInPage from './pages/LogInPage';
 
 function App() {
-
   const [favoritedLocations, setFavoritedLocations] = useState([]);
   const [myActivites, setMyActivities] = useState([]);
   const [locationData, setLocationData] = useState([]);
   const [currentUser, setCurrentUser] = useState({});
-  // const [currentUserID, setCurrentUserID] = useState("");
   const [isQuerying, setIsQuerying] = useState(false);
   const [userAuthenticated, setUserAuthenticated] = useState(false);
 
@@ -63,14 +61,10 @@ function App() {
         firebaseUser.id = firebaseUser.uid;
         
         // Setting Local State
-        // setCurrentUserID(firebaseUser.uid);
-        setCurrentUser(firebaseUser, databaseListen(firebaseUser.uid)); // asyncronous?
-
+        setCurrentUser(firebaseUser, databaseListen(firebaseUser.uid));
         setUserAuthenticated(true);
       } else {
-
         setCurrentUser("");
-        // setCurrentUserID("");
         setUserAuthenticated(false);
       }
       setIsQuerying(false)

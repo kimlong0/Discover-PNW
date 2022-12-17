@@ -2,7 +2,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { NavLink } from 'react-router-dom';
 
-export default function BasicExample() {
+export default function AppNavBar() {
   return (
     <Navbar id="navbar" bg="light" expand="sm">
         <Navbar.Brand as={NavLink} to='discover'><img className='app-logo' src='/img/discover_pnw_logo.png' alt='app logo'></img></Navbar.Brand>
