@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import CardListVanilla from '../CardListVanilla';
+import CardListVanilla from '../CardList';
 import IconHeart from '../icons/Heart';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -17,8 +17,6 @@ function NoFavoriteMessage() {
 }
 
 function MyActivitiesPage(props) {
-
-    // Destruction props to make it easier
     const locationData = props.locationData;
     const favoritedLocation = props.favoritedLocations;
 

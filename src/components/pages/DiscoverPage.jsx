@@ -1,9 +1,26 @@
 import {useState} from 'react';
 import DiscoverHeader from '../DiscoverHeader.jsx';
-import CardList from '../CardList.jsx';
+import CardListVanilla from '../CardList.jsx';
 
 function DiscoverPage(props) {
   const [currentFilters, setFilters] = useState([]);
+  const locationsData = props.locationData;  
+  let filteredLocationData = props.locationData;
+
+  if (currentFilters.length) {
+    filteredLocationData = locationsData.filter((location) => {
+      return isSelected(location);
+    })
+  }
+
+  function isSelected(location) {
+    for(let i = 0; i < currentFilters.length; i++){
+      if(location.category.includes(currentFilters[i])){
+          return true;
+      } 
+    }
+    return false;
+  }
 
   return (
     <div>
@@ -11,12 +28,10 @@ function DiscoverPage(props) {
         <section>
           <h2 className="cards-header">Popular Adventures</h2>
         </section>
-        <CardList 
-          currentUser={props.currentUser}
+        <CardListVanilla 
           currentUserId={props.currentUserId}
-          locations={props.locationData} 
-          currentFilters={currentFilters}
-          favoritedLocations={props.favoritedLocations}
+          locations={filteredLocationData} 
+          favoritedLocations={props.favoritedLocations} 
         />
     </div>
   )
