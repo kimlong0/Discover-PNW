@@ -4,7 +4,6 @@ import IconLandmark from './icons/Landmark';
 import IconEvent from './icons/Event';
 
 export default function DiscoverHeader(props) {
-    //const [currentFilters, setFilters] = useState([]);
     const filterNames = ["Nature", "City", "Landmark", "Event"];
     const filterIcons = [<IconMountainsSun/>, <IconCity/>, <IconLandmark/>, <IconEvent/>];
     const setFilter = props.setFiltersFunction;
@@ -47,7 +46,6 @@ function adjustFilters(event, setFilterCallback, currentFilters){
         }));
     } else {
         button.classList.add("active");
-        console.log(button.id)
         setFilterCallback([...currentFilters, button.id]);
     }
 }

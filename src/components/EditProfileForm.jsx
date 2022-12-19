@@ -14,8 +14,6 @@ function EditProfileForm(props) {
         event.preventDefault();
         const newDisplayName = firstName + " " + lastName;
         await updateProfile(currentUser, { displayName: newDisplayName });
-
-        // window.location.reload();
         navigateTo('/profile');
     }
 
