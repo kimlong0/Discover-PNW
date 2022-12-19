@@ -66,9 +66,9 @@ function CardVanilla(props) {
     }
 
     return (
-        <Link to={locationData.name}>
-            <div className="location-card">
-                <div className="card">
+        <div className="location-card">
+            <div className="card">
+                <Link to={locationData.name}>
                     <div className="text-image-container">
                         <img src={locationData.img} className="card-img-top" alt={locationData.name}></img>
                         <div className="card-body">
@@ -80,9 +80,9 @@ function CardVanilla(props) {
                             </div>
                         </div>
                     </div>
-                </div>
+                </Link>
             </div>
-        </Link>
+        </div>
     );
 }
 

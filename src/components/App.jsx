@@ -28,7 +28,7 @@ function App() {
   useEffect(() => {
     //READING IN DATA FROM JSON FILE
     setIsQuerying(true);
-    fetch('data/pnw-locations.json').catch((error) => {
+    fetch('/data/pnw-locations.json').catch((error) => {
       console.log(error);
     })
     .then((response) => {
