@@ -190,29 +190,34 @@ export default function DiscoverDetails(props){
             <section>
                 <div className="image-container">
                     <img src={selectedDetailslocation.img} className="img-fluid" alt={selectedDetailslocation.name}/>
-                    <div className="discover-text-container d-flex flex-row ">
-                        <div className="location-text d-flex flex-column me-auto p-2">
-                            <h1>{selectedDetailslocation.name}</h1>
-                            <h2 className="location-subtext">{selectedDetailslocation.location}</h2>
-                        </div>
-                        <div className="activity-card">
-                            <img src={medalImageSource} alt={medalImageSource + " medal"}></img>
-                            <div className="activity-description">
-                                <p className="activity-title fw-bold">{selectedDetailslocation.medal + " Medal Adventure"}</p>
+                    <div className='info-wrapper'>
+                        <div className="discover-text-container d-flex flex-row ">
+                            <div className="location-text d-flex flex-column me-auto">
+                                <h1>{selectedDetailslocation.name}</h1>
+                                <h2 className="location-subtext">{selectedDetailslocation.location}</h2>
                             </div>
-                            <button className='favorite-heart-button' onClick={handleFavorite}>
-                                <IconHeart favorite={isFavorited()}/>
-                            </button>
+                            <div className="activity-card">
+                                <img src={medalImageSource} alt={medalImageSource + " medal"}></img>
+                                <div className="activity-description">
+                                    <p className="activity-title fw-bold">{selectedDetailslocation.medal + " Medal Adventure"}</p>
+                                </div>
+                                <button className='favorite-heart-button' onClick={handleFavorite}>
+                                    <IconHeart favorite={isFavorited()}/>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <p className="discover-detail-text">
-                   {selectedDetailslocation.description}
-                </p>
-                <div className="button-container">
-                    <button onClick={handleClick} type="button" className={isMyActivity() ? "btn btn-secondary btn-xl btn-block" : "btn btn-success btn-xl btn-block"}>{buttonText()}</button>
-                </div>
+                <div className='info-wrapper'>
+                    <p className="discover-detail-text">
+                        {selectedDetailslocation.description}
+                    </p>
+                    <div className="button-container">
+                        <button onClick={handleClick} type="button" className={isMyActivity() ? "btn btn-secondary btn-xl btn-block" : "btn btn-success btn-xl btn-block"}>{buttonText()}</button>
+                    </div>
                 <div className="iframe-container d-flex justify-content-center" dangerouslySetInnerHTML={{__html: iFrameValues[locationNameString]}} ></div>
+            
+                </div>
             </section>
             <ToastContainer closeButton={false} newestOnTop/>
         </main>

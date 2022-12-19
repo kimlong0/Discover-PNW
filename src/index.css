@@ -398,6 +398,10 @@ div.cards {
   height: 70%;
 }
 
+.info-wrapper {
+  margin: 0 1rem;
+}
+
 .discover-text-container {
   margin-right: 1.5rem;
   margin-top: 0.5rem;
@@ -429,21 +433,18 @@ div.cards {
   width: 230px;
 }
 
-.location-text .location-subtext {
-  font-size: 1.2rem;
+.location-subtext {
+  font-size: 1rem;
 }
 
-body .discover-detail-text {
+.discover-detail-text {
   font-size: 1rem;
-  margin-right: 2rem;
-  margin-left: 1rem;
   margin-top: 1rem;
 }
 
 .button-container {
   display: flex;
   gap: 0.5rem;
-  margin-left: 1rem;
   margin-bottom: 2rem;
 }
 
@@ -527,10 +528,6 @@ body .discover-detail-text {
   text-align: right;
 }
 
-.image-container h1, .image-container h2{
-  font-size: 1.5rem;
-}
-
 /* Error Page */
 .error-page {
   padding-top: 5rem;
@@ -549,8 +546,8 @@ body .discover-detail-text {
     background-color: #e8f3e1;
   }
 
-  body .discover-detail-text {
-      font-size: 1.1rem;
+  .discover-detail-text {
+    font-size: 1.1rem;
   }
 
   .quick-filters-btn {
@@ -561,12 +558,12 @@ body .discover-detail-text {
 
 /* On 768px or larger displays */
 @media(min-width: 768px) {
-  body .discover-detail-text {
+  .discover-detail-text {
       font-size: 1.15rem;
   }
 
-  .location-text .location-subtext {
-    font-size: 1.5rem;
+.location-subtext {
+    font-size: 1rem;
     text-align: left;
   }
 
@@ -584,7 +581,7 @@ body .discover-detail-text {
       justify-content: center;
   }
 
-  .image-container h1, .image-container h2{
+  .image-container h1{
       font-size: 2rem;
   }
 
@@ -594,7 +591,8 @@ body .discover-detail-text {
   }
 
   .card {
-      margin-right: 2rem;
+      margin-right: 1rem;
+      margin-left: 1rem;
   }
 
   .footer-wrapper{
@@ -604,9 +602,9 @@ body .discover-detail-text {
 
 /* On 992px or larger displays */
 @media(min-width: 992px) {
-  body .discover-detail-text {
-      font-size: 1.2rem;
-      transition: .25s ease-out;
+  .discover-detail-text {
+    font-size: 1.2rem;
+    transition: .25s ease-out;
   }
 
   .change-camera-edit {
@@ -629,7 +627,7 @@ body .discover-detail-text {
 
 /* On 1312px or larger displays */
 @media(min-width: 1312px){
-  body .discover-detail-text {
-      font-size: 1.3rem;
+  .discover-detail-text {
+    font-size: 1.3rem;
   }
 }
