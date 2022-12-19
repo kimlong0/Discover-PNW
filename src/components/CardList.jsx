@@ -8,32 +8,49 @@ function CardVanilla(props) {
     const locationData = props.location;
     const currentUserId = props.currentUserId;
     const favoritedLocations = props.favoritedLocations;
-
+    
     function handleFavorite(event) {
         // To prevent from activating the main <a> tag surrounding the card.
         event.preventDefault();
-        const db = getDatabase(); //"the database"
-        const userFavoriteRef = ref(db, "userData/" + currentUserId + "/favoriteLocations");
-
-        // Before pushing to firebase, if not favorited -> adds to firebase, else -> remove location from firebase
-        if (!isFavorited()) {
-            firebasePush(userFavoriteRef, locationData.name).catch((error) => console.log(error));
-        } else {
-            let locationId = "";
-            for (let locationObj in favoritedLocations) {
-                if (locationData.name === favoritedLocations[locationObj].name) {
-                    locationId = favoritedLocations[locationObj].id;
+        if (currentUserId) {
+            const db = getDatabase(); //"the database"
+             
+            // Before pushing to firebase, if not favorited -> adds to firebase, else -> remove location from firebase
+            if (!isFavorited()) {
+                const userFavoriteRef = ref(db, "userData/" + currentUserId + "/favoriteLocations");
+                firebasePush(userFavoriteRef, locationData.name)
+                .catch((error) => console.log(error))
+                .then(
+                    toast.success(`Added ${locationData.name} to My Adventures.`, {
+                        position: "top-center",
+                        autoClose: 2000,
+                    })
+                );
+            } else {
+                let locationId = "";
+                for (let locationObj in favoritedLocations) {
+                    if (locationData.name === favoritedLocations[locationObj].name) {
+                        locationId = favoritedLocations[locationObj].id;
+                    }
                 }
+    
+                // Creating existing ref from database
+                const existingFavoritedRef = ref(db, "userData/" + currentUserId + "/favoriteLocations/" + locationId);
+                firebaseRemove(existingFavoritedRef)
+                .catch((error) => {
+                    console.log(error);
+                })
+                .then(
+                    toast.info(`Removed ${locationData.name} from My Adventures.`, {
+                        position: "top-center",
+                        autoClose: 2000,
+                    })
+                );
             }
-            const existingFavoritedRef = ref(db, "userData/" + currentUserId + "/favoriteLocations/" + locationId);
-            toast(`Removed ${locationData.name} from My Adventures.`, {
-                position: "bottom-right",
+        } else {
+            toast.warning(`Please Login to Favorite`, {
+                position: "top-center",
                 autoClose: 2000,
-                hideProgressBar: true,
-            });
-            
-            firebaseRemove(existingFavoritedRef).catch((error) => {
-                console.log(error);
             });
         }
     }
@@ -65,7 +82,6 @@ function CardVanilla(props) {
                     </div>
                 </div>
             </div>
-            <ToastContainer closeButton={false}/>
         </Link>
     );
 }
@@ -89,6 +105,7 @@ function CardListVanilla(props) {
                     {locationCardsElements}
                 </div>
             </div>
+            <ToastContainer closeButton={false} newestOnTop />
         </section>
     );
 }

@@ -126,7 +126,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Navigate to='discover'/>} />
           <Route path='login' element = {<LogInPage userAuthenticated={userAuthenticated}/>}></Route>
-          <Route path='discover' element={<DiscoverPage locationData={locationData} currentUser={currentUser} currentUserId={currentUser.id} favoritedLocations={favoritedLocations}/>}/>
+          <Route path='discover' element={<DiscoverPage locationData={locationData} currentUserId={currentUser.id} favoritedLocations={favoritedLocations}/>}/>
           <Route path='discover/:locationName' element={<DiscoverDetails locationData={locationData} currentUserId={currentUser.id} favoritedLocations={favoritedLocations} myActivites={myActivites}/>}/>
           <Route path='*' element={<ErrorPage />}/>
           

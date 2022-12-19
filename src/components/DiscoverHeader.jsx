@@ -8,13 +8,18 @@ export default function DiscoverHeader(props) {
     const filterNames = ["Nature", "City", "Landmark", "Event"];
     const filterIcons = [<IconMountainsSun/>, <IconCity/>, <IconLandmark/>, <IconEvent/>];
     const setFilter = props.setFiltersFunction;
-
     const currentFilters = props.currentFilters;
-    
-    function adjustFilterCallback(event, setFilter, currentFilters){
-        adjustFilters(event, setFilter, currentFilters);
-    }
 
+    const filterButtonList = filterNames.map((location, index) => {
+        return(
+            <button className="btn quick-filters-btn" key={location} id={location} onClick={(event) => {
+                adjustFilters(event, setFilter, currentFilters);
+            }}>
+                <span>{filterIcons[index]}</span>
+                <div>{location}</div>
+            </button>
+        )
+    })
 
     return (
         <header>
@@ -24,17 +29,7 @@ export default function DiscoverHeader(props) {
                     <h2 className="secondary-text">Find your next trip</h2>
                 </div>
                 <div className="quick-filters btn-group btn-group-toggle" data-toggle="buttons">
-                    {filterNames.map((location, index) => {
-                        return(
-                            <button className="btn quick-filters-btn" key={location} id={location} onClick={(event) => {
-                                adjustFilterCallback(event, setFilter, currentFilters);
-                            }}>
-                                <span>{filterIcons[index]}</span>
-                                <div>{location}</div>
-                            
-                            </button>
-                        )
-                    })}
+                    {filterButtonList}
                 </div>
             </section>
         </header>
@@ -47,10 +42,12 @@ function adjustFilters(event, setFilterCallback, currentFilters){
     if(button.classList.contains("active")){
         button.classList.remove("active");
         setFilterCallback(currentFilters.filter((value) => {
-            return value !== button.id
+            console.log(value !== button.id);
+            return value !== button.id;
         }));
     } else {
         button.classList.add("active");
+        console.log(button.id)
         setFilterCallback([...currentFilters, button.id]);
     }
 }

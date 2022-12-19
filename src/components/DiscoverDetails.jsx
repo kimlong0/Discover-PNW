@@ -68,18 +68,17 @@ export default function DiscoverDetails(props){
         // To prevent from activating the main <a> tag surrounding the card.
         event.preventDefault();
 
-        const db = getDatabase(); //"the database"
-        const userCompletedRef = ref(db, "userData/" + currentUserId + "/adventureCompleted");
-
-        // Before pushing to firebase, if not completed activity -> adds to firebase, else -> remove completed activity from firebase
         if (currentUserId) {
+            const db = getDatabase(); //"the database"
+            
+            // Before pushing to firebase, if not completed activity -> adds to firebase, else -> remove completed activity from firebase
             if (!isMyActivity()) {
+                const userCompletedRef = ref(db, "userData/" + currentUserId + "/adventureCompleted");
                 firebasePush(userCompletedRef, selectedDetailslocation.name)
                 .then(() => {
                     toast.success(`Added ${locationNameString} to Completed Adventures.`, {
-                        position: "bottom-right",
+                        position: "top-center",
                         autoClose: 2000,
-                        hideProgressBar: true,
                         });
                 }).catch((error => {
                     console.log(error);
@@ -94,10 +93,9 @@ export default function DiscoverDetails(props){
                 const existingCompletedActivityRef = ref(db, "userData/" + currentUserId + "/adventureCompleted/" + completedActivityId);
                 firebaseRemove(existingCompletedActivityRef)
                 .then(() => {
-                    toast(`Removed ${locationNameString} from Completed Adventures.`, {
-                        position: "bottom-right",
+                    toast.info(`Removed ${locationNameString} from Completed Adventures.`, {
+                        position: "top-center",
                         autoClose: 2000,
-                        hideProgressBar: true,
                     });
                 }).catch((error) => {
                     console.log(error);
@@ -105,9 +103,8 @@ export default function DiscoverDetails(props){
             }
         } else {
             toast.warning(`Please Login to Complete Adventure`, {
-                position: "bottom-right",
+                position: "top-center",
                 autoClose: 2000,
-                hideProgressBar: true,
             });
         }
     };
@@ -123,30 +120,23 @@ export default function DiscoverDetails(props){
     }
 
     function handleFavorite() {
-        const db = getDatabase();
-        const userFavoriteRef = ref(db, "userData/" + currentUserId + "/favoriteLocations");
-        
-        // Before pushing to firebase, if not favorited -> adds to firebase, else -> remove location from firebase
         if (currentUserId) {
+            const db = getDatabase();
+            
+            // Before pushing to firebase, if not favorited -> adds to firebase, else -> remove location from firebase
             if (!isFavorited()) {
+                const userFavoriteRef = ref(db, "userData/" + currentUserId + "/favoriteLocations");
                 firebasePush(userFavoriteRef, selectedDetailslocation.name).catch((error) => {
-                    console.log("error");
-                });
-                toast.success(`Added ${locationNameString} to My Adventures.`, {
-                    position: "bottom-right",
-                    autoClose: 2000,
-                    hideProgressBar: true,
-                    closeOnClick: false,
-                });
+                    console.log(error);
+                }).then(
+                    toast.success(`Added ${locationNameString} to My Adventures.`, {
+                        position: "top-center",
+                        autoClose: 2000,
+                    })
+                );
     
             } else {
                 let locationId = "";
-                    toast(`Removed ${locationNameString} from My Adventures.`, {
-                    position: "bottom-right",
-                    autoClose: 2000,
-                    hideProgressBar: true,
-                    closeOnClick: false,
-                });
                 for (let locationObj in favoritedLocations) {
                     if (selectedDetailslocation.name === favoritedLocations[locationObj].name) {
                         locationId = favoritedLocations[locationObj].id;
@@ -155,16 +145,19 @@ export default function DiscoverDetails(props){
                 const existingFavoritedRef = ref(db, "userData/" + currentUserId + "/favoriteLocations/" + locationId);
                 firebaseRemove(existingFavoritedRef).catch((error) => {
                     console.log(error);
-                });
+                }).then(
+                    toast.info(`Removed ${locationNameString} from My Adventures.`, {
+                        position: "top-center",
+                        autoClose: 2000,
+                    })
+                );
             }
         } else {
             toast.warning(`Please Login to Favorite`, {
-                position: "bottom-right",
+                position: "top-center",
                 autoClose: 2000,
-                hideProgressBar: true,
             });
         }
-
     }
 
     // If location is in favoratedLocations Array return true, else false.
@@ -184,14 +177,13 @@ export default function DiscoverDetails(props){
     // Display correct medal based on activity
     const medal = selectedDetailslocation.medal;
     let medalImageSource = '';
-
     if (medal === 'Gold') {
-         medalImageSource = '/img/gold-medal.png';
-     } else if (medal === 'Silver') {
-         medalImageSource = '/img/silver-medal.png';
-     } else {
-         medalImageSource = '/img/bronze-medal.png';
-     }
+        medalImageSource = '/img/gold-medal.png';
+    } else if (medal === 'Silver') {
+        medalImageSource = '/img/silver-medal.png';
+    } else {
+        medalImageSource = '/img/bronze-medal.png';
+    }
 
     return (
         <main>
@@ -222,7 +214,7 @@ export default function DiscoverDetails(props){
                 </div>
                 <div className="iframe-container d-flex justify-content-center" dangerouslySetInnerHTML={{__html: iFrameValues[locationNameString]}} ></div>
             </section>
-            <ToastContainer closeButton={false}/>
+            <ToastContainer closeButton={false} newestOnTop/>
         </main>
     );
 }
