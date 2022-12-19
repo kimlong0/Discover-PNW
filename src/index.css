@@ -161,6 +161,19 @@ section {
   flex-direction: column;
 }
 
+.activity-card-link-wrapper {
+  color: black;
+  text-decoration:none
+}
+
+.activity-card-link-wrapper:hover {
+  color: var(--secondary-color);
+}
+
+.activity-card-link-wrapper:active {
+  color: #EDB552;
+}
+
 .activity-card-wrapper {
   display: flex;
   justify-content: center;
@@ -172,7 +185,6 @@ section {
   margin: 0.5rem;
   display: flex;
   align-items: center;
-  /* justify-content: start; */
 }
 
 .activity-description {

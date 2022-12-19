@@ -1,5 +1,6 @@
 import ProfileInfo from '../ProfileInfo.jsx';
 import AwardsList from '../AwardsList.jsx';
+import { Link } from 'react-router-dom';
 
 function ActivityCard(props) {
     const activity = props.activity;
@@ -15,12 +16,14 @@ function ActivityCard(props) {
     }
 
   return (
-    <div className="activity-card">
-        <img src={medalImageSource} alt={activity.medalEarned + " medal"}></img>
-        <div className="activity-description">
-            <p className="activity-title fw-bold">Earned {activity.medal} Medal: {activity.name} {activity.location} </p>
+    <Link className='activity-card-link-wrapper' to={`/discover/${activity.name}`}>
+        <div className="activity-card">
+            <img src={medalImageSource} alt={activity.medalEarned + " medal"}></img>
+            <div className="activity-description">
+                <p className="activity-title fw-bold">Earned {activity.medal} Medal: {activity.name} {activity.location} </p>
+            </div>
         </div>
-    </div>
+    </Link>
   );
 }
 
