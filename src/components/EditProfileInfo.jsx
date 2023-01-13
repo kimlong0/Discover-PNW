@@ -15,9 +15,9 @@ function EditProfileInfo(props) {
             const imageFile = event.target.files[0];
             setPreviewImageUrl(URL.createObjectURL(imageFile));
           
-        //  Uploading User Image
+        //  Uploading User Imagegi
             const storage = getStorage();
-            const imageRef = storageRef(storage, "userImages/" + currentUser.uid + "-profile-image");
+            const imageRef = storageRef(storage, "userImages/" + currentUser.uid + "/" + "profile-image");
             
             await uploadBytes(imageRef, imageFile);
             const donwloadUrlString = await getDownloadURL(imageRef);
